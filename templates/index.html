@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WISDOM</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/gif" href="./dependencies/img/favicon.png">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="./dependencies/css/all.css">
+	<link href="./dependencies/css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:200" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./dependencies/css/animate.css">
+</head>
+<body>
+	<div class="logo">
+		<img src="./dependencies/img/1.png" id="logo">
+	</div>
+	<div id="status"></div>
+	<div id="wisdomSideNav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="navlist">
+  			<a href="about.html">About M3</a>
+  			<a href="#">Choose a different voice</a>
+  			<a href="#">Mobile Chat-Interface</a>
+  			<a href="#">E-commerce Expert System</a>
+		</div>
+	</div>
+	<div class="settings" onclick="openNav()">
+		<img src="./dependencies/img/settings.svg" id="settings">
+	</div>
+	<div class="output" id="output-area">
+			<div class="greetings">Hello World ! <br> 
+			I'm <span class="animated flipInX" id="name_wisdom">Wisdom</span> your personal humanlike conversational AI chatbot. <br>
+			I am an electronic brain that can respond like a human, but more efficiently. <br>
+			GO ahead and ask me anything thats on your mind......</div>
+		</div>
+	<div class="suggestion-container">	
+		<div class="suggestions">
+			<ul>
+				<li onclick="suggestionResponse(1)"><small>Today's Weather</small></li>
+				<li onclick="suggestionResponse(2)"><small id="chatEorD">Disable Chat Mode</small></li>
+				<li onclick="suggestionResponse(3)"><small>Weather Tomorrow</small></li>
+				<li onclick="suggestionResponse(4)"><small>Tech News</small></li>
+				<li onclick="suggestionResponse(5)"><small>Set a timer</small></li>
+				<li onclick="suggestionResponse(6)"><small>My Location</small></li>
+				<li onclick="suggestionResponse(7)"><small>Tell me a joke</small></li>
+				<li onclick="suggestionResponse(8)"><small>Play Music</small></li>
+				<li onclick="suggestionResponse(9)"><small>Open Youtube</small></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container main">
+		<div class="input">
+			<input type="text" name="usrInput" id="usrInput" autofocus="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+		</div>
+		<div class="mic-btn-div">
+            <audio class="sound" id="sound">
+              <source src="./dependencies/audio/speak.mp3" type="audio/mpeg">
+            </audio>
+            <div class="mic-div">
+				<img src="./dependencies/img/microphone.svg" class="mic-img" id="mic-img" onclick="speech_recog()">
+            </div>
+        </div>
+	</div>
+	<script language="JavaScript" type="text/javascript" src="./dependencies/jquery/jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="./dependencies/js/viewScript.js"></script>
+	<script language="JavaScript" type="text/javascript" src="./dependencies/js/botScript.js"></script>
+	<script language="JavaScript" type="text/javascript" src="./dependencies/js/suggestions.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWkXhleDF6SseAPElBOQn06pKvyWfsM9g"
+  type="text/javascript"></script>
+  	<script language="JavaScript" type="text/javascript" src="./dependencies/js/player.js"></script>
+</body>
+</html>
